@@ -19,6 +19,7 @@ const GameContainer = () => {
       <div className={styles.content}>
         <div className={styles.header}>
           <GameSelector currentGame={currentGame} setCurrentGame={setCurrentGame} />
+          <button onClick={() => {throw new Error("This is your first error!");}}>Break the world</button>;
           <button className={styles.darkModeToggle} onClick={() => setIsDarkMode(!isDarkMode)}>
             {isDarkMode ? "☀️" : "🌙"}
           </button>
